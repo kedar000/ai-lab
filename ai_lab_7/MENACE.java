@@ -141,9 +141,9 @@ public class MENACE {
     // Determine the result of the game
     private String getResult(String state) {
         String[] winningPatterns = {
-                "012", "345", "678", // Rows
-                "036", "147", "258", // Columns
-                "048", "246"         // Diagonals
+                "012", "345", "678", 
+                "036", "147", "258", 
+                "048", "246"         
         };
         for (String pattern : winningPatterns) {
             char first = state.charAt(pattern.charAt(0) - '0');
@@ -183,7 +183,6 @@ public class MENACE {
             menace.playGame();
         }
 
-        // Print final win/loss/draw tally
         menace.printResults();
     }
 }
